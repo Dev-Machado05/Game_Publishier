@@ -1,0 +1,19 @@
+@use "../../Variables.scss" as *;
+
+footer{
+    padding: 2%;
+    height: auto;
+    background-color: $Background-Footer;
+    
+}
+
+.ReservedRights {
+    color: black;
+    font-size: 15px;
+}
+
+.FooterDescription {
+    color: black;
+    font-size: 17px;
+    margin-top: 1vh;
+}

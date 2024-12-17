@@ -1,0 +1,35 @@
+@keyframes scrollcr {
+    0% {
+        transform: translateX(0);
+    }  
+
+    100% {
+        transform: translateX(-100%);  /* Ajuste para o carrossel cobrir toda a largura */
+    }   
+}
+
+.NewsTextContainer {
+    display: flex;
+    width: fit-content;
+    padding: 1vh 0.25vh;
+    overflow-x: hidden;
+    animation: scrollcr 20s linear infinite;
+    transform: translateX(0);
+}
+
+/* Ativar a animação quando o componente estiver visível ou em foco */
+.NewsTextContainer:focus-within {
+    animation-play-state: running; /* A animação começa quando o elemento recebe foco */
+}
+
+p{      
+    color: #ffffff;
+    overflow-x: hidden;
+    white-space: nowrap;  
+    font-size: 14px;
+    margin: 0;
+}
+
+p span {
+    display: inline-block;
+}

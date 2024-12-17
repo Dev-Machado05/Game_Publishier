@@ -1,0 +1,44 @@
+@use "../../Variables.scss" as *;
+
+.CardContainer {
+    height: 46vh;
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: $Background-GameCard;
+    padding: 3vh;
+    border-radius: 44.21px;
+    border: solid black 1.34px;
+
+    img {
+        height: 26vh;
+        border-radius: 44.21px;
+        width: auto;
+    }
+
+    h3 {
+        margin-left: 5%;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5vw;
+        gap: 1vh;
+    }
+};
+
+
+.AvContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;  
+    justify-items: center;
+    gap: 10%;
+    
+    img {
+        height: 4.8vh;
+    }
+}

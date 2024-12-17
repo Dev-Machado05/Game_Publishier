@@ -1,0 +1,53 @@
+.CarrousselContainer {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.carroussel {
+    overflow-x: auto;
+}
+
+.CarrousselContent {
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    width: auto;
+    height: 34vh;
+    padding-top: 2vh;
+    display: flex;
+    gap: 0.6vw;
+
+    img {
+        width: auto;
+        height: 33vh;
+    }
+}
+
+
+.ButtonContainer {
+    position: absolute;
+    top: 50%;
+    transform:  translate(-50, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Next, .Prev {
+    position: absolute;
+    top: 45%;
+    transform: rotateY(-50%);
+    font-size: 3vh;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.Prev {
+    left: 1.2vh;
+    transform: scaleX(-1);
+}
+
+.Next {
+    right: 1.2vh;
+}

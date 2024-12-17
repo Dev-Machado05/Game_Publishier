@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #000000;
+  overflow-x: scroll;
+}
+
+html {
+  scroll-behavior: auto; /* Comportamento padrão */
+}
+

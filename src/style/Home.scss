@@ -1,0 +1,30 @@
+@use "../Variables.scss" as *;
+
+.dg3,
+.dg4,
+.dg5,
+.dg6,
+.dg7 {
+    height: 6vh;
+    width: 100%;
+}
+
+.dg3 {
+    background: linear-gradient(to top, $Background-Crossplay, $Black);
+}
+
+.dg4 {
+    background: linear-gradient(to top, $Background-PlayStation, $Background-Crossplay);
+}
+
+.dg5 {
+    background: linear-gradient(to top, $Background-Xbox, $Background-PlayStation);
+}
+
+.dg6 {
+    background: linear-gradient(to top, $Background-Nintendo, $Background-Xbox);
+}
+
+.dg7 {
+    background: linear-gradient(to top, $Background-Footer, $Background-Nintendo);
+}

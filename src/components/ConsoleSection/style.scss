@@ -1,0 +1,85 @@
+@use "../../Variables.scss" as *;
+
+.ConsoleContainer {
+  position: relative; 
+  height: 70vh;
+  padding: 2vh 0;
+  display: flex;
+  flex-direction: column; /* Empilha os elementos verticalmente */
+  align-items: center; /* Centraliza os itens no eixo X */
+  justify-content: center; /* Centraliza no eixo Y */
+
+  header {
+    height: 8vh;
+    width: 100%;
+    background-color: $Background-TitleCard;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+
+    img {
+      height: 80%;
+    }
+  }
+
+  .ConsoleContent {
+    position: relative; /* Posicionamento relativo para o carrossel */
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .ConsoleCarroussel {
+    display: flex; /* Mantém os cards lado a lado */
+    gap: 1vw;
+    overflow: hidden; /* Evita que conteúdo extra vaze */
+    position: relative;
+    width: 93%; /* Define a largura do carrossel */;
+  }
+
+  // Botões de navegação
+  .PrevButtom, .NextButtom {
+    position: absolute;
+    top: 50%; /* Alinha os botões no meio vertical */
+    transform: translateY(-50%); /* Garante que o botão esteja centralizado no eixo Y */
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Formato circular */
+    z-index: 10; /* Garante que os botões fiquem acima do carrossel */
+  }
+
+  // Botão anterior (esquerda)
+  .PrevButtom {
+    left: 10px; /* Posiciona o botão à esquerda */
+    transform: scaleX(-1);
+  }
+
+  // Botão próximo (direita)
+  .NextButtom {
+    right: 10px; /* Posiciona o botão à direita */
+  }
+}
+
+#CrossplayContainer {
+  background-color: $Background-Crossplay;
+}
+
+#PlayStationContainer {
+  background-color: $Background-PlayStation;
+}
+
+#XboxContainer {
+  background-color: $Background-Xbox;
+}
+
+#NintendoContainer {
+  background-color: $Background-Nintendo;
+}
