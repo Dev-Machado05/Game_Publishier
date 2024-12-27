@@ -5,7 +5,7 @@
   height: 70vh;
   padding: 2vh 0;
   display: flex;
-  flex-direction: column; /* Empilha os elementos verticalmente */
+  flex-direction: column; 
   align-items: center; /* Centraliza os itens no eixo X */
   justify-content: center; /* Centraliza no eixo Y */
 
@@ -24,7 +24,7 @@
   }
 
   .ConsoleContent {
-    position: relative; /* Posicionamento relativo para o carrossel */
+    position: relative; 
     height: 90%;
     display: flex;
     align-items: center;
@@ -33,18 +33,19 @@
   }
 
   .ConsoleCarroussel {
-    display: flex; /* Mantém os cards lado a lado */
+    display: flex; 
     gap: 1vw;
-    overflow: hidden; /* Evita que conteúdo extra vaze */
+    overflow: hidden; 
     position: relative;
-    width: 93%; /* Define a largura do carrossel */;
+    width: 93%; 
   }
 
   // Botões de navegação
   .PrevButtom, .NextButtom {
     position: absolute;
-    top: 50%; /* Alinha os botões no meio vertical */
+    top: 50%; 
     transform: translateY(-50%); /* Garante que o botão esteja centralizado no eixo Y */
+    background-color: transparent;
     border: none;
     cursor: pointer;
     width: 50px;
@@ -52,8 +53,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%; /* Formato circular */
+    border-radius: 50%; 
     z-index: 10; /* Garante que os botões fiquem acima do carrossel */
+
+    &:hover {
+      background-color: $White;
+      transition: background-color 0.3s ease-in-out;
+    }
+
   }
 
   // Botão anterior (esquerda)

@@ -7,7 +7,7 @@ export default function Carroussel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
-  const totalImages = 20;
+  const totalImages = 24;
 
   useEffect(() => {
     const HandleScreenResize = () => setScreenWidth(window.innerWidth);
@@ -16,19 +16,26 @@ export default function Carroussel() {
     return () => window.removeEventListener("resize", HandleScreenResize);
   }, []);
 
-  const handlePrevClick = () => {
+  const handleClick = (direction) => {
     const carroussel = document.querySelector(".carroussel");
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalImages) % totalImages);
-    carroussel.scrollBy(-screenWidth, 0);
 
-    setScrollPosition(carroussel.scrollRight);
-  };
-
-  const handleNextClick = () => {
-    const carroussel = document.querySelector(".carroussel");
-    carroussel.scrollBy(screenWidth, 0);
-
-    setScrollPosition(carroussel.scrollLeft);
+    if (direction === "prev") {
+      setCurrentIndex(
+        (prevIndex) => (prevIndex - 1 + totalImages) % totalImages
+      );
+      carroussel.scrollBy({ 
+        left: -screenWidth, 
+        behavior: "smooth" //imlementa a animação de scroll no eixo X
+      });
+    } else {
+      setCurrentIndex(
+        (prevIndex) => (prevIndex + 1) % totalImages
+      );
+      carroussel.scrollBy({ 
+        left: screenWidth, 
+        behavior: "smooth" 
+      });
+    }
   };
 
   return (
@@ -42,18 +49,20 @@ export default function Carroussel() {
               i // cards
             ) => (
               <img
-                key={i}
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`}
-                alt={`Imagem ${i}`}
+                key={i + 1}
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
+                  i + 1
+                }.png`}
+                alt={`Imagem ${i + 1}`}
               />
             )
           )}
         </main>
       </nav>
-      <button className="Prev" onClick={handlePrevClick}>
+      <button className="Prev" onClick={() => handleClick("prev")}>
         <img src={buttonImage} alt="Botão anterior" />
       </button>
-      <button className="Next" onClick={handleNextClick}>
+      <button className="Next" onClick={() => handleClick("next")}>
         <img src={buttonImage} alt="Botão próximo" />
       </button>
     </section>
