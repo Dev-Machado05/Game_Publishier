@@ -1,35 +1,60 @@
 @use "../../Variables.scss" as *;
 
-.dg1 {
-    height: 2vh;
-    width: 100%;
-    background: linear-gradient(to top, $Background-Header, $Black); /* Usando variáveis SCSS */
-}
+header {
 
-.LogoEmpresa {
-    display: flex;
-    align-items: center;
-    gap: 0.5vw;
-    
-    img {
-        height: 60px;
-        border-radius: 50%;
+    .dg1 {
+        height: 2vh;
+        width: 100%;
+        background: linear-gradient(to top, $Background-Header, $Black); /* Usando variáveis SCSS */
     }
-}
-
-.dg2 {
-    @extend .dg1;
-    transform: scaleY(-1);
-}
-
-header main {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    background-color: $Background-Header; /* Usando variáveis SCSS */
-    padding: 10px;
-
-    ul {
+        
+    .LogoEmpresa {
         display: flex;
+        align-items: center;
+        gap: 0.5vw;
+        
+        img {
+            height: 60px;
+        border-radius: 50%;
+        }
+    }
+    
+    .dg2 {
+        @extend .dg1;
+        transform: scaleY(-1);
+    }
+    
+    main {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        background-color: $Background-Header; /* Usando variáveis SCSS */
+        padding: 10px;
+        
+        nav {
+            display: flex;
+            gap: 10px;
+            
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                color: black;
+            }
+        }
+    }
+
+    section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        h3 {
+            color: black;
+        }
     }
 }

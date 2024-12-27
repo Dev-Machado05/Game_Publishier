@@ -11,13 +11,15 @@ export default function Header() {
             <h1>GMPBS</h1>
         </section>
         <nav>
-            <ul>
-                <li>t1</li>
-                <li>t2</li>
-                <li>t3</li>
-                <li>t4</li>
-            </ul>
+            <a href="">Navegação 1</a>
+            <a href="">Navegação 2</a>
+            <a href="">Navegação 3</a>
+            <a href="">Navegação 4</a>
         </nav>
+        <section>
+          <img src={logo} alt="Imagem do Usuário" />
+          <h3>Username</h3>
+        </section>
       </main>
       <div className="dg2"/>
     </header>
