@@ -9,7 +9,7 @@ import {
   NintendoIcon,
   TerrariaImg,
   NextButton,
-} from "../../assets";
+} from "../../assets/images";
 
 const icons = {
   Crossplay: CrossplayIcon,

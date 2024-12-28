@@ -1,5 +1,5 @@
 import "./style.scss";
-import { XboxIcon, WindowsIcon, AppleIcon, PlayStationIcon, NintendoIcon, AndroidIcon } from "../../assets";
+import { XboxIcon, WindowsIcon, AppleIcon, PlayStationIcon, NintendoIcon, AndroidIcon } from "../../assets/images";
 
 export default function Card({
   Image,

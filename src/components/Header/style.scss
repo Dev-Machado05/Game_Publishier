@@ -19,35 +19,54 @@ header {
         }
     }
     
-    .dg2 {
-        @extend .dg1;
-        transform: scaleY(-1);
+    //Configuração da barra de pesquisa
+
+    .SearchBarContainer {
+        height: 3vh;
+        width: 25vw;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        gap: 3%;
+        border-radius: 5px;
+        background-color: $White;
+
+        button {
+            height: 100%;
+            width: 10%;
+            border: none;
+            background-color: $White;
+            cursor: pointer;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        
+        input {
+            height: 100%;
+            width: 80%;
+            padding: 5px;
+            border: none;
+            background-color: $White;
+        }
     }
-    
+
     main {
         align-items: center;
         display: flex;
         justify-content: space-between;
         background-color: $Background-Header; /* Usando variáveis SCSS */
-        padding: 10px;
-        
-        nav {
-            display: flex;
-            gap: 10px;
-            
-            a {
-                text-decoration: none;
-                font-size: 16px;
-                color: black;
-            }
-        }
-    }
-
+        padding: 10px;        
+       }
+    
     section {
         display: flex;
         align-items: center;
         gap: 10px;
-
+        
         img {
             height: 60px;
             border-radius: 50%;
@@ -56,5 +75,10 @@ header {
         h3 {
             color: black;
         }
+    }
+    
+    .dg2 {
+        @extend .dg1;
+        transform: scaleY(-1);
     }
 }
