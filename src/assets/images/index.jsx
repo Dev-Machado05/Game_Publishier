@@ -13,6 +13,7 @@ import AppleIcon from "./APIcon.png";
 import AndroidIcon from "./ANIcon.png";
 import TerrariaImg from "./TerrariaImg.png";
 import NextButton from "./button-right.svg"
+import CloudOff from "./cloud-off.svg"
 
 export {
   logo,
@@ -28,4 +29,5 @@ export {
   AndroidIcon,
   TerrariaImg,
   NextButton,
+  CloudOff,
 };

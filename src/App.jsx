@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 
 import Home from "./pages/Home";
+import Error from "./pages/Error";
 
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⢶⣾⠻⣦⡀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠙⢶⡾⠃⠀⠀⠀⠀⠀
@@ -23,10 +24,10 @@ const router = createBrowserRouter([
       path: "/",
       element: <Home/>,
   },
-  // {
-  //   path: "*",
-  //   element: <Error />
-  // },
+  {
+    path: "*",
+    element: <Error />
+  },
 ]);
 
 export default function App() {
