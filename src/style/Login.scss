@@ -1,0 +1,19 @@
+@use "../Variables.scss" as *;
+
+.LoginContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .LoginFooter {
+        padding: 0;
+        background-color: transparent;
+        
+        .degrade1 {
+            background: linear-gradient(to bottom, transparent, $Background-Footer);
+            height: 5vh;
+            width: 100%;
+        }
+    }
+}

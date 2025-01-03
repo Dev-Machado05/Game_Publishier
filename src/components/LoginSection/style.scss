@@ -1,0 +1,19 @@
+@use "../../Variables.scss" as *;
+
+.LoginSectionContainer {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+
+    .LoginSectionContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+        background-color: $Login_SignUp-Section;
+        height: 25rem;
+        width: 15rem;
+        gap: 5%;
+    }
+}

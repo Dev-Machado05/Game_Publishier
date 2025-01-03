@@ -6,23 +6,27 @@ export default function Header() {
     <header>
       <div className="dg1" />
       <main>
-        <section className="LogoEmpresa">
-          <img src={logo} alt="" />
-          <h1>GMPBS</h1>
-        </section> 
+        <a href="/">
+          <section className="LogoEmpresa">
+            <img src={logo} alt="Logo da empresa" />
+            <h1>GMPBS</h1>
+          </section>
+        </a>
         <div className="SearchBarContainer">
           <button className="search">
             <img src={SearchButton} alt="Botão de busca" />
           </button>
-          <input type="text" name="SearchBar" />
+          <input type="text" name="SearchBar" placeholder="Pesquisar" />
           <button className="filter">
             <img src={FilterButton} alt="Botão do Filtro" />
           </button>
         </div>
-        <section>
-          <img src={logo} alt="Imagem do Usuário" />
-          <h3>Username</h3>
-        </section>
+        <a href="/Login">
+          <section>
+            <img src={logo} alt="Imagem do Usuário" />
+            <h2>Username</h2>
+          </section>
+        </a>
       </main>
       <div className="dg2" />
     </header>

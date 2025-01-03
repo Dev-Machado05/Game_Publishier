@@ -5,6 +5,7 @@ import './App.css';
 
 import Home from "./pages/Home";
 import Error from "./pages/Error";
+import Login from './pages/Login';
 
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⢶⣾⠻⣦⡀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠙⢶⡾⠃⠀⠀⠀⠀⠀
@@ -22,11 +23,15 @@ import Error from "./pages/Error";
 const router = createBrowserRouter([
   {
       path: "/",
-      element: <Home/>,
+      element: <Home />,
+  },
+  {
+    path: "/Login",
+    element: <Login />,
   },
   {
     path: "*",
-    element: <Error />
+    element: <Error />,
   },
 ]);
 

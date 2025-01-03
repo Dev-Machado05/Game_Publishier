@@ -12,6 +12,7 @@ header {
         display: flex;
         align-items: center;
         gap: 0.5vw;
+        cursor: pointer;
         
         img {
             height: 60px;
@@ -59,7 +60,13 @@ header {
         display: flex;
         justify-content: space-between;
         background-color: $Background-Header; /* Usando variáveis SCSS */
-        padding: 10px;        
+        padding: 10px;   
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
        }
     
     section {
@@ -72,7 +79,7 @@ header {
             border-radius: 50%;
         }
 
-        h3 {
+        h2 {
             color: black;
         }
     }
