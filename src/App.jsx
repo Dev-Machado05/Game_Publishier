@@ -6,6 +6,7 @@ import './App.css';
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⢶⣾⠻⣦⡀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠙⢶⡾⠃⠀⠀⠀⠀⠀
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/Login",
     element: <Login />,
+  },
+  {
+    path: "/SignUp",
+    element: <SignUp />,
   },
   {
     path: "*",
