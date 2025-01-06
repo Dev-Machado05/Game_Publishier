@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import GamePreview from './pages/GamePreview';
 
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⢶⣾⠻⣦⡀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠙⢶⡾⠃⠀⠀⠀⠀⠀
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
     path: "/SignUp",
     element: <SignUp />,
   },
+  {
+    path: "/GamePreview/:id",
+    element: <GamePreview />,
+  }, 
   {
     path: "*",
     element: <Error />,

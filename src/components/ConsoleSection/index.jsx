@@ -243,7 +243,7 @@ export default function ConsoleSection({ Console }) {
       <main className="ConsoleContent">
         <div className="ConsoleCarroussel" ref={carrouselRef}>
           {CardArray.map((cardData, i) => (
-            <Card key={i} {...cardData} />
+            <Card key={i} {...cardData} id={i}/>
           ))}
         </div>
       </main>

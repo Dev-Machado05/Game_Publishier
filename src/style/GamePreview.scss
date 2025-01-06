@@ -1,0 +1,25 @@
+@use "../Variables.scss" as *;
+
+.GamePreviewContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    .GameTitle {
+        h1 {
+            font-size: 35px;
+            color: $White;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: $Light-Gray;
+        }
+    }
+
+    .Description {
+        height: 50vh;
+        background-color: $Background-GameCard;
+    }
+}
