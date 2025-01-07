@@ -1,12 +1,24 @@
 @use "../Variables.scss" as *;
 
-.GamePreviewContainer{
-    height: 100vh;
+.degrade1 {
+    background: linear-gradient(to bottom, transparent, $Background-GameDescription);
+    height: 5vh;
+    width: 100%;
+}
+
+.degrade2 {
+    @extend .degrade1;
+    transform: scaleY(-1);
+    margin-bottom: 2vh;
+
+}
+
+.GamePreviewContainer {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    
+
     .GameTitle {
+        padding: 2vh 2vw;
         h1 {
             font-size: 35px;
             color: $White;
@@ -18,8 +30,53 @@
         }
     }
 
-    .Description {
-        height: 50vh;
-        background-color: $Background-GameCard;
+    .GameCarroussel {
+        height: auto;
+        background-color: $Background-GameDescription;
     }
+
+    .Description {
+        height: auto;
+        background-color: $Background-GameDescription;
+        padding: 2vh 1vw;
+
+        h3 {
+            margin: 1.5vh 0.5vw;
+            font-size: 27px;
+            color: $White
+        }
+
+        main {
+            word-wrap: break-word;
+            overflow-wrap: normal;
+            white-space: normal;
+
+            width: 100%;
+            max-width: 100%;
+
+            p {
+                font-size: 17px;
+            }
+
+        }
+
+        .AnchorContainer {
+            padding: 0 1vw;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;   
+            gap: 1vh;
+        }
+        a {
+            font-size: 20px;
+            text-decoration: none;
+            color: $White;
+        }
+    }
+}
+
+.degrade3 {
+    background: linear-gradient(to bottom, $Background-GameDescription, $Background-Footer);
+    height: 5vh;
+    width: 100%;
 }

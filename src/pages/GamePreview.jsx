@@ -2,8 +2,10 @@ import { useParams } from "react-router-dom";
 import "../style/GamePreview.scss";
 
 import Header from "../components/Header";
+import ImageCarroussel from "../components/Carroussel";
 import Games from "../SimBackend";
 import Footer from "../components/Footer";
+import React from "react";
 
 export default function GameDescription() {
   //Adquirindo o id do produto
@@ -19,26 +21,46 @@ export default function GameDescription() {
         <h1>{`${Game.name}`}</h1>
         <h2>{`${Game.developer} • ${Game.genre} • ${Game.genre2}`}</h2>
       </section>
-      {/* <ImageCarroussel/> */}
-      <section className="Description">
-        <h3>Descrição</h3>
-        <p>{`${Game.description}`}</p>
+      <div className="degrade1" />
+      <section className="GameCarroussel">
+        <ImageCarroussel />
+      </section>
+      <div className="degrade2" />
 
-        <section className="AnchorContainer"> {/*    ----------- Adicionar um display grid para manter uma estrutura 2x3 */}
-          
-          {Object.entries( Game.platform ) // Converte o objeto Game.platform em um array de pares [chave, valor]
-            .filter(([ platform, available ]) => available) // Filtra apenas as entradas onde o valor (available) é true.
-            .map(([ platform ]) => ( // Mapeia as chaves restantes para criar um link <a> correspondente.
-                <>
-                  <br />
-                  <a href="" key={platform}> {/* ------ arrumar o link, possivelmente adicionar no BD simulado */}
+      <div className="degrade1" />
+      <section className="Description">
+        <h3>Descrição:</h3>
+        <main>
+          {Game.description.split("\n").map((line, index) => (
+            <p key={index}>
+              {line}
+              <br />
+            </p>
+          ))}
+        </main>
+
+        <h3>Links:</h3>
+        <section className="AnchorContainer">
+          {Object.entries(Game.platform) // Converte o objeto Game.platform em um array de pares [chave, valor]
+            .filter(([platform, available]) => available) // Filtra apenas as plataformas disponíveis (valor true)
+            .map(
+              (
+                [platform] // Mapeia as plataformas disponíveis para links
+              ) => (
+                <div className="LinkContent">
+                  <a
+                    href={Game.links[`${platform}Link`]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {platform}
                   </a>
-                </>
+                </div>
               )
             )}
         </section>
       </section>
+      <div className="degrade3" />
       <Footer />
     </main>
   );
