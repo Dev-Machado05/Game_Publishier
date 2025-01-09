@@ -8,7 +8,7 @@
 
 .degrade2 {
     @extend .degrade1;
-    transform: scaleY(-1);
+    background: linear-gradient(to bottom, $Background-GameDescription, transparent);
     margin-bottom: 2vh;
 
 }
