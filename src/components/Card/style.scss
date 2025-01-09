@@ -1,26 +1,34 @@
 @use "../../Variables.scss" as *;
 
 .CardContainer {
-    height: 46vh;
+    height: 52vh;
     display: flex;
-    gap: 1vh;
+    align-items: center;
     flex-direction: column;
     justify-content: space-around;
     background-color: $Background-GameCard;
-    padding: 3vh;
     border-radius: 44.21px;
     border: solid black 1.34px;
-
+    
+    a{ 
+        padding: 3vh;
+        height: 100%;
+        gap: 5%;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+    }
     img {
         height: 26vh;
         border-radius: 44.21px;
         width: auto;
     }
-
+    
     h3 {
+        color: $Black;
         margin-left: 5%;
     }
-
+    
     section {
         display: flex;
         flex-direction: column;

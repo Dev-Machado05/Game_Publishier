@@ -1,25 +1,34 @@
 import "./style.scss";
-import logo from "../../assets/images/lg1.webp"
+import { logo, SearchButton, FilterButton } from "../../assets/images/index";
 
 export default function Header() {
   return (
     <header>
       <div className="dg1" />
       <main>
-        <section className="LogoEmpresa">
-            <img src={logo} alt="" />
+        <a href="/">
+          <section className="LogoEmpresa">
+            <img src={logo} alt="Logo da empresa" />
             <h1>GMPBS</h1>
-        </section>
-        <nav>
-            <ul>
-                <li>t1</li>
-                <li>t2</li>
-                <li>t3</li>
-                <li>t4</li>
-            </ul>
-        </nav>
+          </section>
+        </a>
+        <div className="SearchBarContainer">
+          <button className="search">
+            <img src={SearchButton} alt="Botão de busca" />
+          </button>
+          <input type="text" name="SearchBar" placeholder="Pesquisar" />
+          <button className="filter">
+            <img src={FilterButton} alt="Botão do Filtro" />
+          </button>
+        </div>
+        <a href="/Login">
+          <section>
+            <img src={logo} alt="Imagem do Usuário" />
+            <h2>Username</h2>
+          </section>
+        </a>
       </main>
-      <div className="dg2"/>
+      <div className="dg2" />
     </header>
   );
 }

@@ -3,7 +3,11 @@ import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 
-import Home from "./pages/Home"
+import Home from "./pages/Home";
+import Error from "./pages/Error";
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+import GamePreview from './pages/GamePreview';
 
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⢶⣾⠻⣦⡀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠙⢶⡾⠃⠀⠀⠀⠀⠀
@@ -21,12 +25,24 @@ import Home from "./pages/Home"
 const router = createBrowserRouter([
   {
       path: "/",
-      element: <Home/>,
+      element: <Home />,
   },
-  // {
-  //   path: "*",
-  //   element: <Error />
-  // },
+  {
+    path: "/Login",
+    element: <Login />,
+  },
+  {
+    path: "/SignUp",
+    element: <SignUp />,
+  },
+  {
+    path: "/GamePreview/:id",
+    element: <GamePreview />,
+  }, 
+  {
+    path: "*",
+    element: <Error />,
+  },
 ]);
 
 export default function App() {

@@ -1,5 +1,13 @@
 import "./style.scss";
-import { XboxIcon, WindowsIcon, AppleIcon, PlayStationIcon, NintendoIcon, AndroidIcon } from "../../assets";
+import {
+  XboxIcon,
+  WindowsIcon,
+  AppleIcon,
+  PlayStationIcon,
+  NintendoIcon,
+  AndroidIcon,
+} from "../../assets/images";
+import { Navigate } from "react-router-dom";
 
 export default function Card({
   Image,
@@ -9,6 +17,8 @@ export default function Card({
   PlayStation,
   Nintendo,
   Android,
+
+  id,
 }) {
   // Mapeamento entre nomes e ícones
   const IconMap = {
@@ -30,20 +40,22 @@ export default function Card({
   };
 
   const ActivatedIcons = Object.entries(Platforms)
-    .filter(([name, value]) => value) 
-    .map(([name]) => name);           
+    .filter(([name, value]) => value)
+    .map(([name]) => name);
 
   return (
     <main className="CardContainer">
-      <img src={Image} alt="" />
-      <h3>Disponível em:</h3>
-      <section>
-            <figure className="AvContainer">
-              {ActivatedIcons.map(platform => (
-                <img key={platform} src={IconMap[platform]} alt={platform} />
-              ))}
-            </figure>
-      </section>
+      <a href={`/GamePreview/${id}`}>
+        <img src={Image} alt="" />
+        <h3>Disponível em:</h3>
+        <section>
+          <figure className="AvContainer">
+            {ActivatedIcons.map((platform) => (
+              <img key={platform} src={IconMap[platform]} alt={platform} />
+            ))}
+          </figure>
+        </section>
+      </a>
     </main>
   );
 }
